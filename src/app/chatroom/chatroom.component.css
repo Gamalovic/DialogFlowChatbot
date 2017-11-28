@@ -1,0 +1,41 @@
+.typeHere{
+    
+    width: 80%;
+    height: 60px;
+    border-radius: 50px;
+    border-bottom-right-radius: 0;    
+    border-width:3px;
+    margin-top: 50px;
+    margin: 0 auto;
+}
+
+.typeHereContainer{
+    position: fixed;
+    bottom: 0;
+    height: 100px;
+    width: 80%;
+    background-color: white;
+    padding-top: 5px;
+    
+}
+.userQuestion{
+    padding: 15px 20px;
+    height: auto;
+    border-radius: 15px;
+    border-bottom-right-radius: 0;
+    background-color: #b6ffa5;
+    margin: 40px auto; 
+    box-shadow: 3px 4px 12px 0px #dcdcdc;
+    
+}
+.botAnswer{
+    
+    padding: 15px 20px;
+    height: auto;
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+    background-color: #d7fff6;
+    margin: 40px auto;
+    box-shadow: -3px 4px 12px 0px #dcdcdc;
+    
+}

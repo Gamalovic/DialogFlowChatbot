@@ -1,0 +1,15 @@
+<div class="container">
+  <ng-container class="chat" *ngFor="let l of listOfQuestions;let k = index " >
+      <div class="userQuestion">{{l}}</div>
+      <div> </div>
+      <div class="botAnswer">{{listOfAnswers[k]}}</div>
+  </ng-container>
+
+
+
+  <div class="typeHereContainer">
+    <input class="form-control typeHere" 
+    [(ngModel)]="formVal" ngModel (keyup.enter)="sendMessage()"
+    type="text">
+  </div>
+</div>

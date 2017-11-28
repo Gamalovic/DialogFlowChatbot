@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container" >
+    <a class="navbar-brand" href="#"><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/138240-200.png" height="30px" width="30px">Floki</a>
+      
+    <ul  class="navbar-nav navbar-right ">
+      <li ngbDropdown class="nav-item dropdown ">
+        <div *ngIf="user$|async as user ;else anonymous">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{user.displayName}}
+          </a>
+        </div>
+
+        <ng-template #anonymous>
+            <a ngbDropdownToggle class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                UserName
+            </a>
+        </ng-template>
+
+
+        <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div *ngIf="!(user$|async) ;else ann">
+            <a class="dropdown-item" routerLink="">Login</a>
+          </div>
+
+          <ng-template #ann>
+            <a class="dropdown-item"  routerLink="/floki">Chatroom</a>
+            <div class="dropdown-divider"></div>
+            <a  class="dropdown-item" (click)="logout()">Logout</a>
+          </ng-template>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
