@@ -13,7 +13,12 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    this.afAuth.login()
+    this.afAuth.login();
+  }
+
+  anonymousLogin(){
+    this.afAuth.anonymousLogin();
+    console.log(this.afAuth.isAnonymous);
   }
 
 }

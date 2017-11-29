@@ -6,7 +6,8 @@
       <li ngbDropdown class="nav-item dropdown ">
         <div *ngIf="user$|async as user ;else anonymous">
           <a ngbDropdownToggle class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{user.displayName}}
+            <span *ngIf="!(user.displayName);else notAnonymous">Anonymous</span>
+            <ng-template #notAnonymous>{{user.displayName}}</ng-template>
           </a>
         </div>
 
