@@ -2,5 +2,5 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 body{
     font-family: 'Ubuntu Condensed', sans-serif;
-    
+    padding-top: 50px;
 }

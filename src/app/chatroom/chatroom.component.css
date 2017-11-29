@@ -1,6 +1,6 @@
 .typeHere{
     
-    width: 80%;
+    width: 60%;
     height: 60px;
     border-radius: 50px;
     border-bottom-right-radius: 0;    
@@ -10,10 +10,8 @@
 }
 
 .typeHereContainer{
-    position: fixed;
-    bottom: 0;
     height: 100px;
-    width: 80%;
+    width: 100%;
     background-color: white;
     padding-top: 5px;
     
@@ -22,10 +20,11 @@
     padding: 15px 20px;
     height: auto;
     border-radius: 15px;
-    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
     background-color: #b6ffa5;
-    margin: 40px auto; 
-    box-shadow: 3px 4px 12px 0px #dcdcdc;
+    box-shadow: 3px 4px 12px 0px #dcdcdc; 
+    float:left;
+    margin-top: 50px;
     
 }
 .botAnswer{
@@ -33,9 +32,15 @@
     padding: 15px 20px;
     height: auto;
     border-radius: 15px;
-    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;    
     background-color: #d7fff6;
-    margin: 40px auto;
-    box-shadow: -3px 4px 12px 0px #dcdcdc;
+    box-shadow: -3px 4px 12px 0px #dcdcdc; 
+    float:right;
+    margin-top: 100px;
     
+}
+
+.contain{
+    width: 100%;
+    display: table;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewChecked,ViewChild,ElementRef } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { ApiAiClient } from 'api-ai-javascript';
 import { Observable } from 'rxjs/Observable';
@@ -7,11 +7,14 @@ import { Observable } from 'rxjs/Observable';
   templateUrl: './chatroom.component.html',
   styleUrls: ['./chatroom.component.css']
 })
-export class ChatroomComponent implements OnInit {
+export class ChatroomComponent implements AfterViewChecked {
+
+  @ViewChild('chat') private scroller:ElementRef;
 
   constructor() { }
 
-  ngOnInit() {
+  ngAfterViewChecked(){
+    this.scrollBottom();
   }
 
   formVal:string;
@@ -31,5 +34,12 @@ export class ChatroomComponent implements OnInit {
     })
     
   }
+
+  scrollBottom(){
+      this.scroller.nativeElement.scrollTop=this.scroller.nativeElement.scrollHeight;
+    
+  }
+
+  
 
 }
